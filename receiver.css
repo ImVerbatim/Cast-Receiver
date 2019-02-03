@@ -4,11 +4,11 @@ body {
 cast-media-player {
   --theme-hue: 42;
   --progress-color: rgb(189, 164, 197);
-  --splash-image: url('http://10.210.1.156/ExampleReceiver/FSN_Live_Stream_Start.jpg');
+  --splash-image: url('res/FSN_Live_Stream_Start.jpg');
   --playback-logo-image: url('https://i.imgur.com/zXaGZOm.gif');
-  --watermark-image: url('http://10.210.1.156/castDemo/watermark.jpg');
-  --spinner-image: url('http://10.210.1.156/castDemo/3x.gif');
-  --buffering-image: url('http://10.210.1.156/castDemo/3x.gif');
+  --watermark-image: url('res/watermark.jpg');
+  --spinner-image: url('res/3x.gif');
+  --buffering-image: url('res/3x.gif');
 }
 
 .video-player {
