@@ -3,7 +3,7 @@ const context = cast.framework.CastReceiverContext.getInstance();
 const PlayerManager = context.getPlayerManager();
 let playerElement = document.getElementsByTagName("cast-media-player")[0];
 
-
+var loadingImageIsOn = false;
 
 const playerData = {};
 const playerDataBinder = new cast.framework.ui.PlayerDataBinder(playerData);
@@ -14,6 +14,10 @@ playerDataBinder.addEventListener(
     e => {
       switch (e.value) {
         case cast.framework.ui.State.LAUNCHING:
+          console.log("LAUNCHING");
+          loadingImageIsOn = true;
+          loadingImageUI('visible');
+          
         case cast.framework.ui.State.IDLE:
           // Write your own event handling code
           console.log("IDLE");
@@ -41,8 +45,20 @@ playerDataBinder.addEventListener(
       }
     });
 
+    /**
+     * 
+     * @param {String} doThis Sets the pause button UI (invisible/visible)
+     */
     function pauseButtonUI(doThis){
       document.getElementById('pause-Button').style.visibility = doThis;
+    }
+    
+    /**
+     * 
+     * @param {String} doThis Sets the splash image button UI (invisible/visible)
+     */
+    function loadingImageUI(doThis){
+      document.getElementById('loading-Image').style.visibility = doThis;
     }
 
 context.start();

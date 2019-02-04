@@ -24,3 +24,10 @@ cast-media-player {
   display: flex;
   justify-content: center;
 }
+
+#loading-Image  {
+  position: fixed;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+}
