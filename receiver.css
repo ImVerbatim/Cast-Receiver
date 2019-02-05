@@ -86,7 +86,7 @@ html, body {
   position: fixed;
   visibility: hidden;
   top: 89%;
-  left: 5%;
+  left: 10%;
   transform: translate(-50%, -50%);
 }
 #durationTime  {
@@ -95,7 +95,7 @@ html, body {
   position: fixed;
   visibility: hidden;
   top: 89%;
-  left: 95%;
+  left: 90%;
   transform: translate(-50%, -50%);
 }
 

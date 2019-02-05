@@ -1,8 +1,19 @@
+//The following line is added for sending data to Touchstone during development and test phases only.
+// The TOUCHSTONE_SERVICE_URL can be found at https://touchstone.conviva.com/instructions
+// TEST_CUSTOMER_KEY is the key provided to you by Conviva.
+// Please be sure to use the test key for testing your applications.
+ /*
+ TODO: CONVIVA STUFF
+var settings = { };
+settings.gatewayUrl = (TOUCHSTONE_SERVICE_URL);
+Conviva.LivePass.initWithSettings(TEST_CUSTOMER_KEY, settings);*/
+
+
 const context = cast.framework.CastReceiverContext.getInstance();
 //const control = cast.framework.ui.Controls.getInstance();
 const PlayerManager = context.getPlayerManager();
 
-PlayerManager.get
+//PlayerManager.get
 const playerData = {};
 const playerDataBinder = new cast.framework.ui.PlayerDataBinder(playerData);
 var currentTime = PlayerManager.getCurrentTimeSec();
@@ -10,6 +21,7 @@ var currentTime = PlayerManager.getCurrentTimeSec();
 
 const metadata = new cast.framework.messages.GenericMediaMetadata();
 metadata.title = "Title";
+
 
 // Update ui according to player state
 playerDataBinder.addEventListener(
@@ -57,7 +69,7 @@ playerDataBinder.addEventListener(
           bufferImageUI("hidden");
           watermarkImageUI("hidden");
           progressBarUI("hidden");
-          titleUI("invisible");
+          titleUI("hidden");
           console.log("PLAYING");
 
           break;
