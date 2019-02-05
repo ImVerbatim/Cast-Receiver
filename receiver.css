@@ -1,33 +1,101 @@
-body {
-  --playback-logo-image: url('https://pngimage.net/wp-content/uploads/2018/06/fox-sports-png-5.png');
-}
-cast-media-player {
-  --theme-hue: 42;
-  --progress-color: rgb(189, 164, 197);
-  --splash-image: url('res/FSN_Live_Stream_Start.jpg');
-  --playback-logo-image: url('https://i.imgur.com/zXaGZOm.gif');
-  --watermark-image: url('res/watermark.jpg');
-  --spinner-image: url('res/3x.gif');
-  --buffering-image: url('res/3x.gif');
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
-.video-player {
+.video-player{
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
 
-
+.castMediaElement{
+  display: block;
+  margin: 0 auto; 
+  height: 100%;
+  width: 100%;
+  
 }
 
 #pause-Button {
   position: fixed;
-  width: 50px;
-  height: 50px;
   visibility: hidden;
-  display: flex;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #loading-Image  {
   position: fixed;
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
+  visibility: visible;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+#buffer-Image {
+  position: fixed;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#watermark {
+  max-width: 100px;
+  max-height: 59px;
+  position: absolute;
+  visibility: hidden;
+  top: 5%;
+  right: 5%;
+}
+
+#title-media {
+  font-size: 3vw;
+  color: white;
+  position: fixed;
+  visibility: hidden;
+  top: 4%;
+  left: 4%;
+}
+
+#progress {
+  position: fixed;
+  background: #333;
+  border-radius: 5px;
+  height: 0.5vw;
+  width: 75%;
+  top: 91%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+#progress:after {
+  content: ' ';
+  display: block;
+  width:0%;
+  background: white;
+  height: 100%;
+  border-radius: 9px;
+}
+
+#currentTime  {
+  font-size: 1vw;
+  color: white;
+  position: fixed;
+  visibility: hidden;
+  top: 89%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+#durationTime  {
+  font-size: 1vw;
+  color: white;
+  position: fixed;
+  visibility: hidden;
+  top: 89%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
