@@ -22,7 +22,8 @@ var currentTime = PlayerManager.getCurrentTimeSec();
 const metadata = new cast.framework.messages.GenericMediaMetadata();
 metadata.title = "Title";
 
-
+//TODO: Create a method called VodEnable() that enables all the UI stuff for the vod 
+//TODO: do the same with live streams when that is avaliable
 // Update ui according to player state
 playerDataBinder.addEventListener(
     cast.framework.ui.PlayerDataEventType.STATE_CHANGED,
